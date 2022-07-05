@@ -49,7 +49,7 @@ services:
     react-app:
         container_name: tokio_react
         build:
-            context: ../react-app
+            context: ../notes-app
             dockerfile: Dockerfile
         volumes:
             - ../react-app:/app
