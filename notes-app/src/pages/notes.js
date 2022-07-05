@@ -16,10 +16,10 @@ const Notes = () => {
                     <Card.Body>
                         <Card.Title>Note Title</Card.Title>
                         <Card.Text>
-                            <span className="muted" align="right">Date</span>
+                            <p className="muted" align="right">Date</p>
                         </Card.Text>
                         <Card.Text>
-                            Note Description - Lookout flogging bilge rat main sheet bilge water nipper fluke to go on account heave down clap of thunder. Reef sails six pounders skysail code of conduct sloop cog Yellow Jack gunwalls grog blossom starboard. Swab black jack ahoy Brethren of the Coast schooner poop deck main sheet topmast furl marooned.
+                            <p>Note Description - Lookout flogging bilge rat main sheet bilge water nipper fluke to go on account heave down clap of thunder. Reef sails six pounders skysail code of conduct sloop cog Yellow Jack gunwalls grog blossom starboard. Swab black jack ahoy Brethren of the Coast schooner poop deck main sheet topmast furl marooned.</p>
                         </Card.Text>
                         <Card.Text>
                             <Badge bg="light" text="dark">Tag 1</Badge>{''}<Badge bg="light" text="dark">Tag 2</Badge>
@@ -34,7 +34,7 @@ const Notes = () => {
                             <p className="muted" align="right">Date</p>
                         </Card.Text>
                         <Card.Text>
-                            Note Description - Lookout flogging bilge rat main sheet bilge water nipper fluke to go on account heave down clap of thunder. Reef sails six pounders skysail code of conduct sloop cog Yellow Jack gunwalls grog blossom starboard. Swab black jack ahoy Brethren of the Coast schooner poop deck main sheet topmast furl marooned.
+                            <p>Note Description - Lookout flogging bilge rat main sheet bilge water nipper fluke to go on account heave down clap of thunder. Reef sails six pounders skysail code of conduct sloop cog Yellow Jack gunwalls grog blossom starboard. Swab black jack ahoy Brethren of the Coast schooner poop deck main sheet topmast furl marooned.</p>
                         </Card.Text>
                         <Card.Text>
                             <Badge bg="light" text="dark">Tag 1</Badge>
@@ -49,7 +49,7 @@ const Notes = () => {
                             <p className="muted" align="right">Date</p>
                         </Card.Text>
                         <Card.Text>
-                            Note Description - Lookout flogging bilge rat main sheet bilge water nipper fluke to go on account heave down clap of thunder. Reef sails six pounders skysail code of conduct sloop cog Yellow Jack gunwalls grog blossom starboard. Swab black jack ahoy Brethren of the Coast schooner poop deck main sheet topmast furl marooned.
+                            <p>Note Description - Lookout flogging bilge rat main sheet bilge water nipper fluke to go on account heave down clap of thunder. Reef sails six pounders skysail code of conduct sloop cog Yellow Jack gunwalls grog blossom starboard. Swab black jack ahoy Brethren of the Coast schooner poop deck main sheet topmast furl marooned.</p>
                         </Card.Text>
                         <Card.Text>
                             <Badge bg="light" text="dark">Tag 1</Badge>{''}<Badge bg="light" text="dark">Tag 2</Badge>{''}<Badge bg="light" text="dark">Tag 3</Badge>

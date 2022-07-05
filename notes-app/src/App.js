@@ -9,10 +9,10 @@ function App() {
           <Container className="mt-5">
               <Nav variant="tabs" defaultActiveKey="/notes" as="ul">
                   <Nav.Item as="li">
-                      <Nav.Link href="/notes">Notes</Nav.Link>
+                      <Nav.Link eventKey="/notes" href="/notes">Notes</Nav.Link>
                   </Nav.Item>
                   <Nav.Item as="li">
-                      <Nav.Link href="/tags">Tags</Nav.Link>
+                      <Nav.Link eventKey="/tags" href="/tags">Tags</Nav.Link>
                   </Nav.Item>
               </Nav>
           </Container>
