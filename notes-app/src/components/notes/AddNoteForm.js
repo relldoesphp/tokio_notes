@@ -13,10 +13,11 @@ const AddNoteForm = ({showForm, handleFormClose, setNotes, tags}) => {
     }
 
     function addNote()  {
-        axios.create('http://localhost:8020/api/notes', form)
-            .then((getData) => {
-                setNotes(getData.data.notes)
-            });
+        axios.create('http://localhost:8020/api/notes', {
+
+        }).then((getData) => {
+            setNotes(getData.data.notes)
+        });
         setForm({'title': '', 'description':'', 'tags': [] })
         handleFormClose();
     }

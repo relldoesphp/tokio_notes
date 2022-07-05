@@ -35,7 +35,7 @@ class NoteController extends Controller
         $data = $request->all();
 
         $validator = Validator::make($data, [
-            'name' => 'required|max:255',
+            'title' => 'required|max:255',
             'description' => 'required|max:255',
         ]);
 
