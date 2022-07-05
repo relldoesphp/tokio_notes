@@ -15,7 +15,7 @@ class CreateTagToNotesTable extends Migration
     {
         Schema::table('tags_to_notes', function (Blueprint $table) {
             $table->id();
-            $table->foreign('tag_id')->references('id')->on('tags')->cascadeOnDelete();
+            $table->foreign('tags_id')->references('id')->on('tags')->cascadeOnDelete();
             $table->foreign('notes_id')->references('id')->on('notes')->cascadeOnDelete();
             $table->timestamps();
         });
