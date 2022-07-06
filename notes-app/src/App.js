@@ -4,24 +4,23 @@ import Notes from "./pages/notes";
 import Tags from "./pages/tags";
 import {useEffect, useState} from "react";
 import axios from "axios";
+import apiService from "./services/apiService";
 
 function App() {
 
     const [notes, setNotes] = useState([]);
     const [tags, setTags] = useState([]);
 
-    useEffect(() =>{
-        axios.get('http://localhost:8020/api/tags')
-            .then((getData) => {
-                setTags(getData.data.tags)
-            })
+    useEffect(() => {
+        apiService.getAllNotes().then((getData) => {
+            setNotes(getData.data.notes)
+        })
     }, [])
 
-    useEffect(() =>{
-        axios.get('http://localhost:8020/api/notes')
-            .then((getData) => {
-                setNotes(getData.data.notes)
-            })
+    useEffect(() => {
+        apiService.getAllTags().then((getData) => {
+            setTags(getData.data.tags)
+        })
     }, [])
 
     return (
@@ -37,7 +36,7 @@ function App() {
                   </Nav>
               </Container>
               <Routes>
-                  <Route path="/" element={<Notes />} />
+                  <Route path="/" element={<Notes notes={notes} tags={tags} setNotes={setNotes} />} />
                   <Route path="/notes" element={<Notes notes={notes} tags={tags} setNotes={setNotes} />} />
                   <Route path="/tags" element={<Tags tags={tags} setTags={setTags} />} />
               </Routes>
