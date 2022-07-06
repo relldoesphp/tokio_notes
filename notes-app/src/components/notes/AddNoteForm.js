@@ -1,6 +1,7 @@
 import {Button, Col, Form, Modal, Row} from "react-bootstrap";
 import {useState} from "react";
 import axios from "axios";
+import apiService from "../../services/apiService";
 
 
 const AddNoteForm = ({showForm, handleFormClose, setNotes, tags}) => {
@@ -12,10 +13,9 @@ const AddNoteForm = ({showForm, handleFormClose, setNotes, tags}) => {
         setForm({...form, [name]:value})
     }
 
-    function addNote()  {
-        axios.create('http://localhost:8020/api/notes', {
-
-        }).then((getData) => {
+    async function addNote()  {
+        await apiService.createNote(form).then();
+        apiService.getAllNotes().then((getData) => {
             setNotes(getData.data.notes)
         });
         setForm({'title': '', 'description':'', 'tags': [] })

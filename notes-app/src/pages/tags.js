@@ -1,12 +1,21 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import {Col, Container, Form, Row, Button} from "react-bootstrap";
 import axios from "axios";
 import apiService from "../services/apiService";
 
 const Tags = ({tags, setTags}) => {
 
+    const [newTag, setNewTag] = useState('');
+
     async function handleDelete(id) {
         await apiService.deleteTag(id)
+        await apiService.getAllTags().then((getData) => {
+            setTags(getData.data.tags)
+        })
+    }
+
+    async function handleCreate() {
+        await apiService.createTag({'name': newTag})
         await apiService.getAllTags().then((getData) => {
             setTags(getData.data.tags)
         })
@@ -17,10 +26,10 @@ const Tags = ({tags, setTags}) => {
             <Form>
                 <Form.Group as={Row} className="mb-3">
                     <Col sm="4">
-                        <Form.Control type="text" name="title"/>
+                        <Form.Control onChange={(e) => setNewTag(e.target.value)} type="text" name="name" value={newTag} />
                     </Col>
                     <Col sm="4">
-                        <Button variant="primary">Add Tag</Button>
+                        <Button variant="primary" onClick={() => handleCreate()}>Add Tag</Button>
                     </Col>
                 </Form.Group>
             </Form>
