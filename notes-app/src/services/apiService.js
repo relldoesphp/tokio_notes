@@ -20,7 +20,7 @@ const updateNote = (id, data) => {
 };
 
 const deleteNote = id => {
-    return http.delete(`/notes/${id}/destroy`);
+    return http.delete(`/notes/${id}`);
 };
 
 const getAllTags = () => {
@@ -36,7 +36,7 @@ const updateTag = (id, data) => {
 };
 
 const deleteTag = id => {
-    return http.delete(`/tags/${id}/destroy`);
+    return http.delete(`/tags/${id}`);
 };
 
 const apiService = {

@@ -31,7 +31,7 @@ const Tags = ({tags, setTags}) => {
                             <h5>{tag.name}</h5>
                         </Col>
                         <Col sm="4">
-                            <Button variant="outline-danger" onClick={handleDelete(tag.id)}>Delete</Button>
+                            <Button variant="outline-danger" onClick={() => handleDelete(tag.id)}>Delete</Button>
                         </Col>
                     </Row>
                 )
