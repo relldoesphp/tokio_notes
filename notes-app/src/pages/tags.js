@@ -11,14 +11,18 @@ const Tags = ({tags, setTags}) => {
         await apiService.deleteTag(id)
         await apiService.getAllTags().then((getData) => {
             setTags(getData.data.tags)
-        })
+        }).catch(e => {
+            console.log(e);
+        });
     }
 
     async function handleCreate() {
         await apiService.createTag({'name': newTag})
         await apiService.getAllTags().then((getData) => {
             setTags(getData.data.tags)
-        })
+        }).catch(e => {
+            console.log(e);
+        });
     }
 
     return (

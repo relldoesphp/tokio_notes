@@ -8,6 +8,7 @@ const http = axios.create({
 });
 
 const getAllNotes = () => {
+
     return http.get("/notes");
 };
 

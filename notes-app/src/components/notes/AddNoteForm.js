@@ -14,12 +14,14 @@ const AddNoteForm = ({showForm, handleFormClose, setNotes, tags}) => {
     }
 
     async function addNote()  {
-        await apiService.createNote(form).then();
-        apiService.getAllNotes().then((getData) => {
-            setNotes(getData.data.notes)
-        });
-        setForm({'title': '', 'description':'', 'tags': [] })
-        handleFormClose();
+        console.log(form)
+        let response = await apiService.createNote(form);
+        console.log(response);
+        // apiService.getAllNotes().then((getData) => {
+        //     setNotes(getData.data.notes)
+        // });
+        // setForm({'title': '', 'description':'', 'tags': [] })
+        // handleFormClose();
     }
 
     return (
